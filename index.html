@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08050a">
+  <title>ANANYA • KAJUKATLI ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles"></div>
+  <div class="grain"></div>
+
+  <main>
+    <section class="screen active" id="intro">
+      <div class="orb orb1"></div><div class="orb orb2"></div>
+      <div class="eyebrow">EK CHHOTI SI SURPRISE 🎀</div>
+      <h1>Oye <span>Kajukatli</span>…</h1>
+      <p class="lead">Aaj bas wish karne nahi aaye hain.<br>Thoda sa ruk… kuch banaya hai tere liye. 🩷</p>
+      <button class="glow-btn" onclick="startExperience()">Surprise kholo ✨</button>
+      <div class="tiny">sound on kar lena… experience aur accha lagega ♡</div>
+    </section>
+
+    <section class="screen" id="reveal">
+      <div class="counter">01 / 07</div>
+      <div class="reveal-box">
+        <div class="mini">TA-DAAA…</div>
+        <h2>Happy Birthday</h2>
+        <div class="name">ANANYA</div>
+        <div class="nickname">a.k.a. <b>KAJUKATLI</b> 🎀</div>
+        <p>Haan haan, ab itna attitude mat dikhana…<br>poora surprise abhi baaki hai 😭</p>
+        <button class="text-btn" onclick="go('memories')">Aage dekho →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="memories">
+      <div class="counter">02 / 07</div>
+      <div class="section-head">
+        <div class="eyebrow">HAMARI MEMORY WALL</div>
+        <h2>7 tasveerein,<br><span>7 alag vibes. 🩷</span></h2>
+      </div>
+      <div class="gallery">
+        <div class="photo-card big"><img src="photos/photo1.jpg"><span>“Is photo mein bhi madam ka apna hi swag hai 😭”</span></div>
+        <div class="photo-card"><img src="photos/photo2.jpg"><span>“Bas yahi confidence chahiye zindagi mein 😂🎀”</span></div>
+        <div class="photo-card"><img src="photos/photo3.jpg"><span>“Birthday girl ka purana version 🥹”</span></div>
+        <div class="photo-card"><img src="photos/photo4.jpg"><span>“Simple si photo… par vibe poori 10/10.”</span></div>
+        <div class="photo-card"><img src="photos/photo5.jpg"><span>“Kajukatli spotted being cute again. 😭🩷”</span></div>
+        <div class="photo-card"><img src="photos/photo6.jpg"><span>“Ye wali smile save karke rakhni hai.”</span></div>
+        <div class="photo-card wide"><img src="photos/photo7.jpg"><span>“Aur haan… ye memory bhi meri favourite list mein hai. 🫶”</span></div>
+      </div>
+      <button class="glow-btn small" onclick="go('cards')">Kuch aur hai… 👀</button>
+    </section>
+
+    <section class="screen" id="cards">
+      <div class="counter">03 / 07</div>
+      <div class="section-head">
+        <div class="eyebrow">KUCH BAATEIN</div>
+        <h2>Kajukatli ke<br><span>baare mein…</span></h2>
+      </div>
+      <div class="cards">
+        <article class="glass-card">
+          <div class="icon">🎀</div>
+          <h3>Sabse pehli baat</h3>
+          <p>Tu jitni simple dikhti hai na, utni simple bilkul nahi hai. 😂 Tere andar alag hi level ka pagalpan chhupa hai.</p>
+        </article>
+        <article class="glass-card">
+          <div class="icon">🫶</div>
+          <h3>Ek sach</h3>
+          <p>Kabhi kabhi tu irritate karti hai, bahut zyada. Lekin phir bhi tu un logon mein se hai jinki dosti easily replace nahi hoti.</p>
+        </article>
+        <article class="glass-card">
+          <div class="icon">✨</div>
+          <h3>Sabse important</h3>
+          <p>Bas aise hi hasti reh, apna pagalpan mat chhod, aur life mein kitna bhi busy ho jaaye… apni ye cute si vibe mat khona.</p>
+        </article>
+      </div>
+      <button class="glow-btn small" onclick="go('letter')">Ek letter bhi hai… 💌</button>
+    </section>
+
+    <section class="screen" id="letter">
+      <div class="counter">04 / 07</div>
+      <div class="letter-wrap">
+        <div class="envelope" id="envelope">
+          <div class="flap"></div>
+          <div class="seal">🩷</div>
+        </div>
+        <div class="letter">
+          <div class="eyebrow">SIRF TERE LIYE</div>
+          <h2>Dear Kajukatli,</h2>
+          <p id="typed"></p>
+          <p class="signature">— tera pagal dost 🫶</p>
+        </div>
+      </div>
+      <button class="glow-btn small" onclick="openLetter()">Letter kholo 💌</button>
+    </section>
+
+    <section class="screen" id="cake">
+      <div class="counter">05 / 07</div>
+      <div class="eyebrow">AB BIRTHDAY WALA PART</div>
+      <h2 class="cake-title">Wish maang, <span>Ananya.</span></h2>
+      <div class="cake-scene">
+        <div class="candles"><i></i><i></i><i></i></div>
+        <div class="cake-top"></div><div class="cake-body"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <p class="lead">Cake par tap kar aur candles bujha de. 🎂</p>
+      <button class="cake-btn" onclick="blowCandles()">🎂 Tap to make a wish ✨</button>
+    </section>
+
+    <section class="screen" id="wish">
+      <div class="counter">06 / 07</div>
+      <div class="firework-area" id="fireworks"></div>
+      <div class="final-message">
+        <div class="eyebrow">WISH ACCEPTED ✨</div>
+        <h2>Happy Birthday<br><span>Kajukatli 🩷</span></h2>
+        <p>Jo bhi wish maangi hai na…<br>bas dil se maangi ho, baaki meri taraf se full support. 🫶</p>
+        <button class="glow-btn small" onclick="go('final')">Last surprise →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="counter">07 / 07</div>
+      <div class="final-orb"></div>
+      <div class="final-content">
+        <div class="eyebrow">MISSION COMPLETE 🎀</div>
+        <div class="huge">ANANYA</div>
+        <div class="script">aka Kajukatli</div>
+        <div class="divider"></div>
+        <p class="big-note">“Har kisi ke saath memories nahi banti…<br>kuch log bas life mein aa jaate hain,<br>aur phir memories apne aap banne lagti hain.”</p>
+        <p class="small-note">Thank you for being the kind of friend jiske saath boring din bhi thoda less boring lagta hai. 😂🩷<br><br>Hamesha khush reh, mast reh, aur haan… birthday treat pending hai. 😭</p>
+        <div class="heart">♡</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="music-pill" id="musicPill">♪ <span>surprise mode on</span></div>
+  <script src="script.js"></script>
+</body>
+    </html>
